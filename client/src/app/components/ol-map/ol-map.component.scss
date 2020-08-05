@@ -1,0 +1,17 @@
+.container {
+  .map {
+    width: 100%;
+    max-width: 1080px;
+    max-height:800px;
+    height:100vh;
+    
+  }
+  .list-container {
+      width: 100%;
+      max-width: 400px;
+  }
+  .map-container, .list-container{
+      display: inline-block;
+      vertical-align: top;
+  }
+}

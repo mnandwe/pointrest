@@ -1,0 +1,21 @@
+.list-wrapper {
+    padding: 5px;
+    .list {
+        padding: 0;
+        margin: 0;
+        .list-item {
+            cursor: pointer;
+            list-style-type: none;
+            margin-top:5px;
+            display: block;
+            min-height:15px;
+            border-bottom: solid 1px #1f1616a1;
+            &:not(.selected):hover{
+                background-color: #1976d241;
+            }
+            &.selected {
+                border: solid 2px #1976d2;
+            }
+        }
+    }
+}

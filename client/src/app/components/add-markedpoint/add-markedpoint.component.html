@@ -1,0 +1,13 @@
+ <div class='form-group'>
+    <h3> New Point?</h3>
+    <p> Select your point on the map and add a name</p>
+    <div class="form-field">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="point.name"/>
+    </div>
+        <br/>
+    <div class="btn-group">
+        <button (click)="savePoint()" class="btn-primary">Save</button>
+        <button (click)="cancel()" class="btn-secondary">Cancel</button>
+    </div>
+</div>

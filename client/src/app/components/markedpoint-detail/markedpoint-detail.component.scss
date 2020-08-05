@@ -1,0 +1,6 @@
+.item-detail {
+    padding:10px;
+    &.selected {
+        border: solid 2px #1976d2;
+    }
+}

@@ -1,0 +1,12 @@
+
+<div class = "list-wrapper">
+    <h2 class="list-title">Points of Interest</h2>
+    <ul class="markedpoints  list">
+        <li class="list-item" *ngFor="let point of markedpoints" (click)="itemClicked(point)">
+            <app-markedpoint-detail [point]="point" [selected]="point.id === selectedPoint" (pointUpdate)="onUpdate($event)" > </app-markedpoint-detail>
+        </li>
+        <li class="list-item" *ngIf="!markedpoints">
+            No points.
+        </li>
+    </ul>   
+</div>

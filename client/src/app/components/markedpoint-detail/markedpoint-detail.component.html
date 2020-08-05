@@ -1,0 +1,22 @@
+<div [ngClass]="{'selected': selected}" class="item-detail">
+    <span>
+        {{point.name}}
+    </span>
+    <div class='btn-group' *ngIf="selected">
+        <button (click)="editPoint()">
+        Edit
+        </button>
+        
+        <button (click)="deletePoint()" class='btn-secondary'>
+        Delete
+        </button>
+    </div>
+    <div class='form-field' *ngIf="editMode">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="editName"/>
+        <div>
+            <button  (click)="saveEdit()">Save</button>
+            <button class='btn-secondary' (click)="cancelEdit()">Cancel</button>
+        </div>
+    </div>
+</div>
