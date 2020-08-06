@@ -3,14 +3,14 @@ A web app to mark points of interest on a map
 
 ## Install
 
-## Client
+### Client
 
-`npm install  `
-`ng serve`
+```npm install
+ng serve```
 
 
 
-## Server
+### Server
 * create virtualenv
 * create postgis db
      ```
