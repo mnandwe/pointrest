@@ -5,7 +5,7 @@ A web app to mark points of interest on a map
 
 ### Client
 
-```npm install
+``` npm install
 ng serve```
 
 
