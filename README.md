@@ -1,16 +1,15 @@
 ## Pointerest
 A web app to mark points of interest on a map
 
-## Install
+## Install and Run
 
-## Client
+### Client
+``` 
+npm install
+ng serve 
+```
 
-`npm install  `
-`ng serve`
-
-
-
-## Server
+### Server
 * create virtualenv
 * create postgis db
      ```
