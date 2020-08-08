@@ -28,6 +28,10 @@ export class AddMarkedpointComponent implements OnInit, OnChanges {
   savePoint(): void {
     this.markedpointService.addPoint(this.point).subscribe((added: Markedpoint) => {
       this.pointAdded.emit({type: 'create', point: added});
+      this.point = {
+        name: '',
+        location: null,
+      };
     });
   }
 
@@ -36,7 +40,7 @@ export class AddMarkedpointComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if(changes && changes.coordinates){
+    if (changes && changes.coordinates) {
     this.point.location = {type: 'Point', coordinates: changes.coordinates.currentValue};
   }
   }

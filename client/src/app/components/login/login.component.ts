@@ -48,8 +48,9 @@ export class LoginComponent implements OnInit {
         .pipe(first())
         .subscribe(
             data => {
-                console.log('success');
-                this.router.navigate(['/'], { relativeTo: this.route });
+                // console.log('success');
+                this.error = 'Success';
+                this.router.navigate([''], { relativeTo: this.route });
             },
             error => {
                 this.loading = false;

@@ -24,6 +24,8 @@ if os.name == 'nt':
     os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
     os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
     GDAL_LIBRARY_PATH =r"C:\OSGeo4W\bin\gdal203.dll"
+else:
+    GDAL_LIBRARY_PATH = '/usr/local/gdal-2.4.3/lib/libgdal.so'
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -37,7 +39,8 @@ SECRET_KEY = '@48e)po!(kv81%^!c50%42f@&e+x(&9s@*o3k&s25wgb6u$-4y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost','localhost:8000', 'ec2-54-212-169-172.us-west-2.compute.amazonaws.com','pserve-env.eba-x97zm7kq.us-west-2.elasticbeanstalk.com','pointerest.s3-us-west-2.amazonaws.com','54.212.169.172','54.212.169.172:80','54.212.169.172:443','pointerest.s3-website-us-west-2.amazonaws.com']
+
 
 # Application definition
 
@@ -104,9 +107,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'pointerest',
-        'USER': 'postgres',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
+        'USER': 'ptrestuser',
+        'PASSWORD': 'ptGon63Ma',
+        'HOST': 'ptrestprod.cctyrzjputc8.us-west-2.rds.amazonaws.com',
         'PORT': '5432'
     }
 }
@@ -149,3 +152,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = "../static/"

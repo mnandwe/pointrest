@@ -97,7 +97,7 @@ export class OlMapComponent implements  AfterViewInit, OnInit {
       }
 
     }, (error: any) => { // TODO: Handle error better
-      console.log('Problem');
+      // console.log('Problem');
       console.log(JSON.parse(error));
     });
   }

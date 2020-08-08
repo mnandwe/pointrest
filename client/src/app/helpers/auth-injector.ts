@@ -21,8 +21,6 @@ export class AuthInjector implements HttpInterceptor {
                 }
             });
         }
-        console.log('Intercept!');
-        console.log(request);
         return next.handle(request);
     }
 }

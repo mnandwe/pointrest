@@ -1,5 +1,7 @@
 <div class='container'>
+    <div class='btn-group'>
     <button (click)='clearSelection()'>Clear Selections</button>
+    </div>
     <div id="map" class="map map-container"></div>
     <div class='list-container'>
         <app-add-markedpoint [coordinates]="newPoint" (pointAdded)="reloadPoints($event)"></app-add-markedpoint>

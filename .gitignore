@@ -43,6 +43,6 @@ client/typings
 # System Files
 .DS_Store
 Thumbs.db
-
+server/.ebextensions
 server/**/__pycache__
 env
